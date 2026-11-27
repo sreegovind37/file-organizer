@@ -1,7 +1,14 @@
 import os
 import shutil
 
-directory = os.path.join(os.path.expanduser('~'),'Documents')
+while True:
+    userdir = input('Enter absolute path of folder to organize: ')
+    directory = userdir.strip().strip("'").strip('"')
+    if os.path.isdir(directory):
+        print("Directory found")
+        break
+    else:
+        print("Directory not found")
 
 extensions = {
     ".svg":"Images",
