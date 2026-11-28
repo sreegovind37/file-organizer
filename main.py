@@ -41,7 +41,7 @@ for filename in os.listdir(directory):
         if extension in extensions:
             foldername = extensions[extension]
             folderpath = os.path.join(directory,foldername)
-            os.makedirs(folderpath,exist_ok = True)  #if already exists, returns none and no error
+            os.makedirs(folderpath,exist_ok = True)  #if already exists, returns none and no error hence uses alreay existing file
 
             destpath = os.path.join(folderpath,filename)
             shutil.move(filepath,destpath)
